@@ -14,7 +14,7 @@ class Link extends Component {
     }
 
     render(){
-        let {active, filter, onClick}=this.props;
+        let { active, filter, onClick } = this.props;
         return (
             <TouchableOpacity 
                 style={{
