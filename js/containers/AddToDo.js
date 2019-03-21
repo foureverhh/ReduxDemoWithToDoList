@@ -10,21 +10,19 @@ import { addTodo } from '../actions';
 class AddTodo extends Component{
     constructor(props){
         super(props);
-        this.inputValue='';
+        this.inputValue = '';
         //inputValue: '';
     }
     render(){
-        return (
-            let { dispatch } = this.props;
-            return(
-                <View style={flexDirection: 'row'}>
+        let { dispatch } = this.props;
+        return(
+                <View style={{flexDirection: 'row'}}>
                     <TextInput style={{flex: 1, borderWidth: 1, borderColor: '#cccccc', textAlign: 'center'}}
-                        onChangeText={text => this.inputValue = text>}/>
-                    <Button title="Add Todo" onPress={()=>dispatch(addTodo(this.inputValue))}/>
+                        onChangeText={text => this.inputValue = text}/>
+                    <Button title="Add Todo" onPress={() => dispatch(addTodo(this.inputValue))}/>
                 </View>
-            );
         );
     }
 }
 
-export default connect()(AddTodo)
+export default connect()(AddTodo);

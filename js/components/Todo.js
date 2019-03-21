@@ -13,7 +13,7 @@ class Todo extends Component {
         text: PropTypes.string.isRequired
     }
 
-    render(
+    render() {
         let {onClick, completed, text} = this.props;
         return (
             <TouchableOpacity
@@ -24,14 +24,14 @@ class Todo extends Component {
                     alignItems: 'center',
                     justifyItems: 'center',
                     backgroundColor: '#cccccc',
-                    margin: 10}},
+                    margin: 10}}
                     onPress={onClick}>
                 <Text style={{textDecorationLine: completed ? 'line-through' : 'none'}}>
                 {text}
                 </Text>
             </TouchableOpacity>
         );
-    )
+    } 
 }
 
 export default Todo;

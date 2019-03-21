@@ -20,7 +20,7 @@ class Link extends Component {
                 style={{
                     marginLeft: 4,
                     height: 40,
-                    flex; 1,
+                    flex: 1,
                     borderWidth: 1,
                     borderColor: '#ccc',
                     alignItems: 'center',
@@ -33,6 +33,6 @@ class Link extends Component {
                 </TouchableOpacity>
         );
     }
-
-    export default Link;
 }
+
+export default Link;

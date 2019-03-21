@@ -1,18 +1,18 @@
-import {ADD_TODO, SET_VISIBILITY_FILTER, TOGGLE_TODO} from "./type";
+import {ADD_TODO, SET_VISIBILITY_FILTER, TOGGLE_TODO} from "./types";
 
 let nextToDoId = 0;
 
-export const addToDo = text => {
+export const addToDo = text => ({
     type: 'ADD_TODO',
     id: nextToDoId++,
     text
-}
-export const setVibilityFilter = filter => {
+});
+export const setVibilityFilter = filter => ({
     type: 'SET_VISIBILITY_FILTER',
     filter
-};
+});
 
-export const toggleToDo = id => {
+export const toggleToDo = id => ({
     type: 'TOOGLE_TODO',
     id
-}
+});
